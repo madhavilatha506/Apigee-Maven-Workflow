@@ -1,37 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.apigee</groupId>
-  <artifactId>apiproxy</artifactId>
-  <version>1.0</version>
-  <packaging>pom</packaging>
+    <groupId>your.group.id</groupId>
+    <artifactId>your-artifact-id</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>io.apigee.build-tools.enterprise4g</groupId>
-        <artifactId>apigee-edge-maven-plugin</artifactId>
-        <version>2.2.2</version>
-        <configuration>
-          <org>${apigee.org}</org>
-          <env>${apigee.env}</env>
-          <api>${apigee.proxy}</api>
-          <bearer>${apigee.token}</bearer>
-          <directory>apiproxy</directory>
-          <apigeeHostURL>https://apigee.googleapis.com</apigeeHostURL>
-          <override>true</override>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>install</phase>
-            <goals>
-              <goal>deploy</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+    <name>Apigee Pipeline Project</name>
+    <description>Deployment pipeline for Apigee X Hybrid</description>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <repositories>
+        <!-- Add this if the Apigee plugin is stored in a custom repository -->
+        <repository>
+            <id>apigee-repo</id>
+            <url>https://your-apigee-maven-repo-url/</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+  <groupId>com.apigee.edge.config</groupId>
+  <artifactId>apigee-config-maven-plugin</artifactId>
+  <version>2.5.1</version>
+</plugin>
+        </plugins>
+    </build>
 </project>
