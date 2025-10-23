@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="testmadhavi">
+  <DisplayName/>
+  <Description/>
+  <CreatedAt>1761202502062</CreatedAt>
+  <LastModifiedAt>1761202502062</LastModifiedAt>
+  <BasePaths>/helloworld</BasePaths>
+  <ProxyEndpoints>
+    <ProxyEndpoint>default</ProxyEndpoint>
+  </ProxyEndpoints>
+  <TargetEndpoints>
+    <TargetEndpoint>default</TargetEndpoint>
+  </TargetEndpoints>
+</APIProxy>
