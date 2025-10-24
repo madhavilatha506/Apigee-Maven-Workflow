@@ -20,7 +20,7 @@
         <!-- Add this if the Apigee plugin is stored in a custom repository -->
         <repository>
             <id>apigee-repo</id>
-            <url>https://raw.githubusercontent.com/apigee/apigee-deploy-maven-plugin/master/repo</url>
+            <url>https://github.com/apigee/apigee-deploy-maven-plugin</url>
         </repository>
         <repository>
             <id>central</id>
