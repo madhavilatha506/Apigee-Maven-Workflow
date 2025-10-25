@@ -15,6 +15,12 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+         <pluginRepositories>
+        <pluginRepository>
+            <id>apigee-repo</id>
+            <url>https://raw.githubusercontent.com/apigee/apigee-deploy-maven-plugin/main/repo</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
         <plugins>
