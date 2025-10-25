@@ -16,29 +16,17 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-    <repositories>
-        <!-- Add this if the Apigee plugin is stored in a custom repository -->
-        <repository>
-            <id>apigee-repo</id>
-            <url>https://github.com/apigee/apigee-deploy-maven-plugin</url>
-        </repository>
-        <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-    </repositories>
-
     <build>
         <plugins>
             <plugin>
   <groupId>com.apigee.edge.config</groupId>
   <artifactId>apigee-config-maven-plugin</artifactId>
-  <version>2.5.1</version>
+  <version>2.7.1</version>
 </plugin>
                  <plugin>
                           <groupId>io.apigee.build-tools.enterprise4g</groupId>
   <artifactId>apigee-edge-maven-plugin</artifactId>
-                           <version>2.5.1</version>
+                           <version>2.7.1</version>
                  </plugin>
         </plugins>
     </build>
