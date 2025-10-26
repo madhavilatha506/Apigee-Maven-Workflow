@@ -36,7 +36,7 @@ jobs:
           APIGEE_TOKEN: ${{ secrets.APIGEE_TOKEN }}
         run: |
           mvn clean install apigee-config:deploy \
-            -Dapigee.org=$APIGEE_ORG \
-            -Dapigee.env=$APIGEE_ENV \
+            -Dapigee.org=$APIGEE_ORGANIZATION \
+            -Dapigee.env=$APIGEE_ENVIRONMENT \
             -Dapigee.token=$APIGEE_TOKEN \
             -Dapigee.proxy=$APIGEE_PROXY
