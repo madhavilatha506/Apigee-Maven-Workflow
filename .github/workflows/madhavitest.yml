@@ -23,7 +23,7 @@ jobs:
         uses: google-github-actions/auth@v2
         with:
           token_format: access_token
-          workload_identity_provider: "projects/170171199217/locations/global/workloadIdentityPools/apigee-workflowgithub/providers/apigee-workflowgithub"
+          workload_identity_provider: "projects/170171199217/locations/global/workloadIdentityPools/apigee-workflowgithub/providers/apigee-provider"
           service_account: "madhavitest@temporal-trees-475907-i1.iam.gserviceaccount.com"
 
       - name: Setup Java
