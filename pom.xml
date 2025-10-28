@@ -1,41 +1,39 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>your.group.id</groupId>
-    <artifactId>your-artifact-id</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
+  <groupId>com.example</groupId>
+  <artifactId>my-apigee-proxy</artifactId>
+  <version>1.0.0</version>
+  <packaging>apiproxy</packaging>
 
-    <name>Apigee Pipeline Project</name>
-    <description>Deployment pipeline for Apigee X Hybrid</description>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.apigee.build-tools.enterprise4g</groupId>
+        <artifactId>apigee-edge-maven-plugin</artifactId>
+        <version>2.7.1</version>
 
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-         <pluginRepositories>
-        <pluginRepository>
-            <id>apigee-repo</id>
-            <url>https://raw.githubusercontent.com/apigee/apigee-deploy-maven-plugin/main/repo</url>
-        </pluginRepository>
-    </pluginRepositories>
+        <configuration>
+          <org>${org}</org>
+          <env>${env}</env>
+          <apigee.config.options>update</apigee.config.options>
+          <deploymentSuffix></deploymentSuffix>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
-    <build>
-        <plugins>
-
-            <plugin>
-                <groupId>io.apigee.build-tools.enterprise4g</groupId>
-                <artifactId>apigee-config-maven-plugin</artifactId>
-                <version>2.3.5</version>
-            </plugin>
-            <plugin>
-                <groupId>io.apigee.build-tools.enterprise4g</groupId>
-                <artifactId>apigee-edge-maven-plugin</artifactId>
-                <version>2.5</version>
-            </plugin>
-
-        </plugins>
-    </build>
+  <profiles>
+    <profile>
+      <id>apigee</id>
+      <activation><activeByDefault>true</activeByDefault></activation>
+      <properties>
+        <org>temporal-trees-475907-i1</org>
+        <env>test</env>
+      </properties>
+    </profile>
+  </profiles>
 </project>
