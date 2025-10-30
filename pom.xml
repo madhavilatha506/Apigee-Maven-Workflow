@@ -15,6 +15,7 @@
         <groupId>io.apigee.build-tools.enterprise4g</groupId>
         <artifactId>apigee-edge-maven-plugin</artifactId>
         <version>2.7.1</version>
+         <extensions>true</extensions>
 
         <configuration>
           <org>${org}</org>
