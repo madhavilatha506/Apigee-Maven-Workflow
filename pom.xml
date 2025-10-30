@@ -7,7 +7,7 @@
   <groupId>com.example</groupId>
   <artifactId>my-apigee-proxy</artifactId>
   <version>1.0.0</version>
-  <packaging>apiproxy</packaging>
+  <packaging>pom</packaging>
 
   <build>
     <plugins>
