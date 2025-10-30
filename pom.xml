@@ -8,14 +8,13 @@
   <artifactId>my-apigee-proxy</artifactId>
   <version>1.0.0</version>
   <packaging>apiproxy</packaging>
-        
+
   <build>
     <plugins>
       <plugin>
-         <groupId>io.apigee.build-tools.enterprise4g</groupId>
-                <artifactId>apigee-edge-maven-plugin</artifactId>
-                <version>2.7.1</version>
-        <extensions>true</extensions>
+        <groupId>io.apigee.build-tools.enterprise4g</groupId>
+        <artifactId>apigee-edge-maven-plugin</artifactId>
+        <version>2.7.1</version>
 
         <configuration>
           <org>${org}</org>
@@ -27,19 +26,10 @@
     </plugins>
   </build>
 
- <pluginRepositories>
-    <pluginRepository>
-      <id>apigee-plugin-repo</id>
-      <url>https://raw.githubusercontent.com/apigee/apigee-deploy-maven-plugin/main/repo</url>
-    </pluginRepository>
-  </pluginRepositories>
-
   <profiles>
     <profile>
       <id>apigee</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
+      <activation><activeByDefault>true</activeByDefault></activation>
       <properties>
         <org>temporal-trees-475907-i1</org>
         <env>test</env>
